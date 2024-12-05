@@ -59,7 +59,7 @@ NLP Project of Datascientest Cohort Aug 2024: Extract and track topics and senti
 │                         `1.0-jqp-initial-data-exploration`.
 │
 ├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         ds_news_nlp and configuration for tools like black
+│                         src and configuration for tools like black
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
@@ -71,9 +71,9 @@ NLP Project of Datascientest Cohort Aug 2024: Extract and track topics and senti
 │
 ├── setup.cfg          <- Configuration file for flake8
 │
-└── ds_news_nlp   <- Source code for use in this project.
+└── src   <- Source code for use in this project.
     │
-    ├── __init__.py             <- Makes ds_news_nlp a Python module
+    ├── __init__.py             <- Makes src a Python module
     │
     ├── config.py               <- Store useful variables and configuration
     │
