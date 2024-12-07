@@ -11,29 +11,31 @@ NLP Project of Datascientest Cohort Aug 2024: Extract and track topics and senti
 
 ## Objective:
   - ### Primary Goals:
-    - Extract and track topics and sentiments in news articles (of a specific narrowed down field) over time across different media outlets and possibly countries.
+    - Extract and track topics and sentiments in news articles (of a specific narrowed-down field) over time across different media outlets and possibly countries.
     - Predict how coverage evolves over time (frequency, sentiment)
+    - Leverage latent structures and inter-outlet relationships to transfer knowledge across data-rich and data-scarce scenarios, enabling more nuanced predictions for specific outlets and regions.
   - ### Secondary Goals:
     - Analyze the frequency of coverage of specific topics in various regions.
-    - Perform sentiment analysis on topics to gauge public opinion (from articles and possibly comments)
+    - Perform sentiment analysis on topics to gauge public opinion (from articles and possibly comments).
     - Visualize topic coverage geographically.
-    - Predict how topic coverage in one country/region or specific media outlet may predict coverage in another (frequency, sentiment) 
-## Data:
-  - Web scraping: Extract data from 3 news pages (one website per person) -> title, article text and comments (Playwright)
-  - Sources: The Independent, The Washington Post..
-  - API extraction: [Newscatcher API](https://newscatcherapi.com/)
- 
-## Modeling:
-  - Topic Extraction: Extract topics from title and article text (whole text or just summary?) with unsupervised model (LDA or NMF, BERTopic)
-  - Time-Series Analysis: How does frequency and sentiment evolve over time (ARIMA or RNN/LSTM ?)
-  - Sentiment Analysis: Understand the sentiment on the topics over time 
-      - if we get labels from an aggregator/API: regression/supervised
-      - else unsupervised: dictionary approach(e.g. VADER) or adjusted LDA/NMF or BERT)
+    - Predict how topic coverage in one country/region or specific media outlet may predict coverage in another (frequency, sentiment).
 
-## Data Visualization: 
-  - Trends and Timelines for topics and sentiments
-  - Distribution of topics across media and countries/regions
-  - Creating geospatial maps (Plotly or GIS systems)
+## Data:
+  - Web scraping: Extract data from 3 news pages (one website per person) -> title, article text and comments (Playwright).
+  - Sources: The Independent, The Washington Post...
+  - API extraction: [Newscatcher API](https://newscatcherapi.com/).
+
+## Modeling:
+  - Extract topics using unsupervised models like LDA or BERTopic, with coherence scoring to refine topic quality.
+  - Perform sentiment analysis using dictionary-based tools (e.g., VADER) or transformer models (e.g., BERT). Fine-tuning or aspect-based sentiment can enhance accuracy.
+  - Aggregate topic frequency and sentiment into time series and apply forecasting models like ARIMA, Prophet, or neural networks (e.g., LSTM, Transformers).
+  - Analyze relationships among outlets and regions with clustering or latent factor modeling (e.g., NMF, SVD).
+  - Transfer patterns from similar topics using semantic embeddings and latent structures, with trajectory aggregation to forecast new topics.
+
+## Data Visualization:
+  - Trends and Timelines for topics and sentiments.
+  - Distribution of topics across media and countries/regions.
+  - Creating geospatial maps (Plotly or GIS systems).
 
 ## Data/news source: https://newscatcherapi.com/
 
